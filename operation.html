@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mathematical Operations</title>
+</head>
+<body>
+    <h1>Mathematical Operations</h1>
+    <button onclick="performOperations()">Perform Operations</button>
+
+    <script>
+        function performOperations() {
+            // Get the first number from the user
+            const num1 = parseFloat(prompt("Enter the first number:"));
+
+            // Check if the user entered a valid number
+            if (isNaN(num1)) {
+                alert("Invalid input for the first number. Please enter a valid number.");
+                return;
+            }
+
+            // Get the second number from the user
+            const num2 = parseFloat(prompt("Enter the second number:"));
+
+            // Check if the user entered a valid number
+            if (isNaN(num2)) {
+                alert("Invalid input for the second number. Please enter a valid number.");
+                return;
+            }
+
+            // Perform mathematical operations
+            const addition = num1 + num2;
+            const subtraction = num1 - num2;
+            const division = num1 / num2;
+            const multiplication = num1 * num2;
+
+            // Display the results
+            alert(`Addition: ${addition}\nSubtraction: ${subtraction}\nDivision: ${division}\nMultiplication: ${multiplication}`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Extract Year of Birth</title>
+</head>
+<body>
+    <h1>Extract Year of Birth from NIC</h1>
+    <button onclick="getYearOfBirth()">Get Year of Birth</button>
+
+    <script>
+        function getYearOfBirth() {
+            const nicNumber = prompt("Enter the NIC number (Format: YYMMDDXXXXX):");
+
+            // Check if the NIC number has the assumed format (10 characters)
+            if (nicNumber.length !== 10) {
+                alert("Invalid NIC number format. Please enter a valid NIC number.");
+                return;
+            }
+
+            // Extract the year of birth from the NIC number (first 2 characters)
+            const yearOfBirth = "19" + nicNumber.slice(0, 2); // Assuming 1900s birth year, adjust accordingly
+
+            alert(`Year of Birth: ${yearOfBirth}`);
+        }
+    </script>
+</body>
+</html>
