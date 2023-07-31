@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('images.png') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form input,
+        form select {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .submit-btn,
+        .cancel-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: yellow;
+            border: none;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .submit-btn {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sign Up Form</h1>
+        <form>
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <label>Date of Birth:</label>
+            <select required>
+                <option value="" disabled selected>Day</option>
+                <!-- Add options for days here -->
+            </select>
+            <select required>
+                <option value="" disabled selected>Month</option>
+                <!-- Add options for months here -->
+            </select>
+            <select required>
+                <option value="" disabled selected>Year</option>
+                <!-- Add options for years here -->
+            </select>
+            <input type="text" placeholder="Country" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <label><input type="checkbox" required> I agree to the terms of use</label>
+            <button type="submit" class="submit-btn">Sign Up</button>
+            <button type="button" class="cancel-btn">Cancel</button>
+        </form>
+    </div>
+</body>
+</html>
